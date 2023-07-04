@@ -5,7 +5,8 @@
 !packages/prisma/.env
 
 # dependencies
-node_modules
+node_modules/*
+!node_modules/next/*
 .pnp
 .pnp.js
 
