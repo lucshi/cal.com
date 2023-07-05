@@ -53,8 +53,9 @@ yarn
 npx prettier --write apps/web/components/PageWrapper.tsx
 
 # replace files
-cp ssr_files/next.js ./node_modules/next/dist/server/next.js
-cp ssr_files/next-server.js ./node_modules/next/dist/server/next-server.js
+# cp ssr_files/next.js ./node_modules/next/dist/server/next.js
+# cp ssr_files/next-server.js ./node_modules/next/dist/server/next-server.js
+# cp ssr_files/apps_web_package.json apps/web/package.json
 
 yarn workspace @calcom/prisma db-migrate
 yarn workspace @calcom/prisma db-deploy
