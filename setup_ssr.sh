@@ -33,9 +33,6 @@ new_code="const interFont = localFont({ src: \"..\/fonts\/Inter-Latin.woff2\", v
 sed -i "s/^const interFont.*/$new_code/" PageWrapper.tsx
 cd ../../..
 
-npx prettier --write apps/web/components/PageWrapper.tsx
-
-
 cd /calcom
 
 # start up postgresql
@@ -52,6 +49,8 @@ sudo -u postgres psql -c "ALTER USER unicorn_user CREATEDB;"
 yarn config set httpProxy http://proxy-dmz.intel.com:912/
 yarn config set httpsProxy http://proxy-dmz.intel.com:912/
 yarn
+
+npx prettier --write apps/web/components/PageWrapper.tsx
 
 # replace files
 cp ssr_files/next.js ./node_modules/next/dist/server/next.js
