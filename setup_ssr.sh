@@ -49,6 +49,8 @@ sudo -u postgres psql -c \
 # alter user attributes for creating db
 sudo -u postgres psql -c "ALTER USER unicorn_user CREATEDB;"
 
+yarn config set httpProxy http://proxy-dmz.intel.com:912/
+yarn config set httpsProxy http://proxy-dmz.intel.com:912/
 yarn
 
 # replace files
